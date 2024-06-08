@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pagina CAC</title>
+    <title>CAC Movies</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
-
+        <nav>
+            <div>
+                <a href="" class="navLogo">CAC-Movies</a>
+            </div>
+            <ul class="navUl">
+                </li>
+                <li>
+                    <a href="" class="item smallFont">Tendencias</a>
+                </li>
+                <li>
+                    <a href="" class="item smallFont">Registrarse</a>
+                </li>
+                <li>
+                    <a href="./Pages/logInForm.html" class="item smallFont" id="indexLogIn">Iniciar Sesion</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <section class="logInSection">
-            <form action="/index.html" method="get">
-                <div class="formH1">
-                    <h1 class="biggerFont">
-                        Log in
-                    </h1>
-                </div>
-                <div class="formInput">
-                    <input type="email" id="user_email" placeholder="Email" name="email" maxlength="35" required>
-                </div>
-                <div class="formInput">
-                    <input type="password" id="user_password" placeholder="Password" maxlength="20" required>
-                </div>
-                <div class="formButton">
-                    <button type="submit" class="smallFont" id="logInButton">Log In</button>
-                    <a href="./Pages/registerForm.html" target="_blank">
-                        <button type="button" id="singUpButton" class="smallFont">Create an account</button>
-                    </a>
-                </div>
-            </form>
-        </section>
-    </div>
+
+    <section class="registerSection">
+        <h1 class="biggerFont">Unlimited series and movies in one place.</h1>
+        <h2 class="bigFont">Enjoy where you want.
+            <br>
+            Cancel whenever you want.
+        </h2>
+        <div>
+            <a href="./Pages/registerForm.html" class="button smallFont">Sing Up</a>
+        </div>
+    </section>
+
+    <section class="searchSection">
+        <h1>What you want to see?</h1>
+        <form class="movieFinder">
+            <input type="text" class="searchInput" placeholder="Search..." id="search" name="search">
+            <input type="submit" class="button smallFont" value="Search"></a>
+        </form>
+
+        <div class="divLine"></div>
+    </section>
+
+
     <script src="script.js"></script>
 </body>
 </html>

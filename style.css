@@ -5,21 +5,152 @@
     text-align: center;
 }
 
-p{
-    text-align: start;
-    margin: 2px 2px 2px 0px;
+:root{
+    --main-color: red;
+    --background-color: gray;
+    --font-color: white;
+    --special-button-color: black;
+    --button-border-color: pink;
+    --button-padding: 0.6em 1.2em;
 }
 
 .biggerFont{
     font-size: 3rem;
     font-weight: bolder;
-    color: #f7f7f7;
+    color: var(--font-color);
+}
+
+.bigFont{
+    font-size: 2.25rem;
+    font-weight: bolder;
+    color: var(--font-color);
 }
 
 .smallFont{
     font-size: 1.025rem;
     font-weight: bold;
 }
+
+.button{
+    background-color: black;
+    padding: var(--button-padding);
+    border-radius: 1em;
+}
+
+/*NavBar Section*/
+
+header{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+
+nav{
+    background-color: var(--main-color);
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navUl{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    margin: 0em 1em;
+}
+
+.item{
+    padding: var(--button-padding);
+    border: 1px solid var(--main-color);
+}
+
+.item:hover{
+    border: 1px solid var(--button-border-color);
+    padding: var(--button-padding);
+    border-radius: 1em;
+    box-shadow: 0em 0em 0.5em black;
+}
+
+#indexLogIn{
+    background-color: var(--special-button-color);
+    border-radius: 1em;
+}
+
+/* End navBar Section*/
+
+/* Register Section */
+
+.registerSection{
+    height: 100%;
+    width: 100%;
+    padding: 10em 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.registerSection h1{
+    width: 40%;
+    padding: 0.5em;
+}
+
+.registerSection div{
+    margin: 2em 0em;
+}
+
+/* End of register Section */
+
+/* Search Section */
+
+.searchSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieFinder{
+    display: flex;
+    flex-direction: row;
+}
+
+.searchInput{
+    width: 39em;
+    height: 2.5em;
+    border-radius: 1em;
+    border: 1px solid;
+    margin: 0em 0.5em;
+    text-align: start;
+    padding-left: 1em;
+}
+
+.button.smallFont{
+    color: var(--font-color);
+}
+
+.divLine{
+    padding: 1px 50em;
+    margin-top: 20em;
+    background-color: var(--main-color);
+}
+
+/* End of search section */
+
+a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+p{
+    text-align: start;
+    margin: 2px 2px 2px 0px;
+}
+
 
 .container{
     width: 100vw;
@@ -49,12 +180,13 @@ form{
 .formInput{
     margin: 10px;
     width: 80%;
-    height: 7%;
+    height: 5%;
 }
 
 .formInput input{
     width: 90%;
     height: 100%;
+    background-color: #3a3a3a;
     border-radius: 30px;
     border: 2px solid #ff6961;
     outline: none;
@@ -81,10 +213,6 @@ form{
     width: 75%;
     display: flex;
     flex-direction: column;
-}
-
-button{
-    color: #f7f7f7;
 }
 
 .formButton button{
