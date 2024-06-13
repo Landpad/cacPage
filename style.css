@@ -43,6 +43,7 @@ header{
     position: fixed;
     top: 0%;
     width: 100%;
+    z-index: 1;
 }
 
 nav{
@@ -135,8 +136,8 @@ li{
 }
 
 .divLine{
-    padding: 1px 50em;
-    margin-top: 20em;
+    padding: 1px 50%;
+    margin-top: 5em;
     background-color: var(--main-color);
 }
 
@@ -148,6 +149,8 @@ li{
     background-color: var(--background-color);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #movies{
@@ -162,6 +165,8 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .movieImgRounded{
@@ -173,11 +178,85 @@ li{
 
 .movieTitle{
     position: absolute;
-    width: 10%;
-    z-index: -100;
+    background: #16161696;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+    right: -100%;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieItem:hover .movieTitle{
+    right: 0;
 }
 
 /* End of movies section */
+
+/* Best Movies section */
+
+section:nth-child(5){
+    flex-direction: row;
+}
+
+#bestMovies{
+    width: 75%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 6em);
+    gap: 1em;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#bestMovies .noTransition{
+    scroll-behavior: auto;
+}
+
+.dragging .img{
+    cursor: grab;
+    user-select: none;
+}
+
+#bestMovies .movieTitle{
+    display: none;
+}
+
+.arrowContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+}
+.arrowContainer:hover{
+    background-color: var(--font-color);
+}
+.arrowContainer:active{
+    transform: translateY(2px);
+}
+
+.arrow{
+    border: solid var(--special-button-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right{
+    transform: rotate(-45deg);
+}
+
+.left{
+    transform: rotate(135deg);
+}
+
+/* End of Best Movies section */
 
 a{
     color: var(--font-color);
