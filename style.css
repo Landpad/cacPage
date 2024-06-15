@@ -9,11 +9,20 @@
 
 :root{
     --main-color: #EF233C;
+    --main-color-shade: #D90429;
+    --secondary-color: #8D99AE;
     --background-color: #2B2D42;
+    --shade-of-background: #33354E;
+    --shadow-color: #232536;
     --font-color: #EDF2F4;
     --special-button-color: black;
     --button-border-color: #EF233C;
     --button-padding: 0.6em 1.2em;
+}
+
+a{
+    color: var(--font-color);
+    text-decoration: none;
 }
 
 .biggerFont{
@@ -342,101 +351,3 @@ section:nth-child(7){
 }
 
 /* End of animations */
-
-a{
-    color: var(--font-color);
-    text-decoration: none;
-}
-
-p{
-    text-align: start;
-    margin: 2px 2px 2px 0px;
-}
-
-
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-color: #161616;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logInSection{
-    width: 35vw;
-    height: 90vh;
-    background-color: #303030;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
-}
-
-form{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.formInput{
-    margin: 10px;
-    width: 80%;
-    height: 5%;
-}
-
-.formInput input{
-    width: 90%;
-    height: 100%;
-    background-color: #3a3a3a;
-    border-radius: 30px;
-    border: 2px solid #ff6961;
-    outline: none;
-    text-align: start;
-    padding-left: 15px;
-}
-
-.formSelect{
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    width: 95%;
-    height: 90%;
-    outline: none;
-    border: 1px solid #ff6961;
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: #f7f7f7;
-    text-align-last: left;
-    padding-left: 15px;
-}
-
-.formButton{
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-}
-
-.formButton button{
-    height: 45px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: #ff6961;
-    border: none;
-}
-
-.formButton button:hover{
-    transform: translateY(-1px);
-    background-color: #ff9994;
-}
-
-#singUpButton{
-    background: none;
-    border: 1px solid #ff6961;
-    width: 95%;
-}
-
-#singUpButton:hover{
-    transform: translateY(-1px);
-    background-color: #ff9994;
-}

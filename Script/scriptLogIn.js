@@ -7,4 +7,4 @@ logInButton.addEventListener('click', ()=>{
     if(userEmail.value == '' || userPassword.value == ''){
         alert('Se deben llenar ambos campos');
     }
-})
+});

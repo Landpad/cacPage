@@ -1,0 +1,105 @@
+p{
+    text-align: start;
+    margin: 2px 2px 2px 0px;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    background-image: linear-gradient(to bottom,rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url("/assets/banner-bg.jpg");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBox{
+    position: absolute;
+    opacity: 1;
+    width: 35vw;
+    height: 90vh;
+    
+}
+
+.logInSection{
+    width: 35vw;
+    height: 90vh;
+    margin-top: 5em;
+    backdrop-filter: blur(10px) brightness(50%);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px var(--shadow-color);
+}
+
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formInput{
+    margin: 10px;
+    width: 80%;
+    height: 5%;
+}
+
+.formInput input{
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 2px solid var(--secondary-color);
+    outline: none;
+    text-align: start;
+    padding-left: 1em;
+    color: var(--secondary-color);
+}
+
+.formSelect{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 95%;
+    height: 90%;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 2em;
+    cursor: pointer;
+    background-color: transparent;
+    text-align-last: left;
+    padding-left: 1em;
+    color: var(--secondary-color);
+}
+
+.formButton{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formButton button{
+    height: 3em;
+    border-radius: 1em;
+    margin: 0.3em;
+    background-color: var(--main-color);
+    color: var(--font-color);
+    border: none;
+}
+
+.formButton button:hover{
+    transform: translateY(-1px);
+    background-color: var(--main-color-shade);
+}
+
+#singUpButton{
+    background: none;
+    border: 1px solid var(--shade-of-background);
+}
+
+#singUpButton:hover{
+    transform: translateY(-1px);
+    background-color: #ff9994;
+}
