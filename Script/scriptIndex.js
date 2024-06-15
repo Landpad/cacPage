@@ -2,10 +2,13 @@
 
 const ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZTNmMDNiMjJlMWU4MjcxOTUwZWRlODllNGYyZmZlMiIsInN1YiI6IjY2NjYzNzJhOTE0Yjg4OTA3YWU5YmJlZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RQS4QslLRYDtk4jt5ryBU9FvWlsSxoIkyLrA5g5fzPY';
 const API_KEY = 'fe3f03b22e1e8271950ede89e4f2ffe2';
+let pageNumber = 1;
 const trendingWeekURL = `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`;
 const trendingDayURL = `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`
 const moviesContainer = document.getElementById("movies");
 const bestMoviesContainer = document.getElementById("bestMovies");
+const nextButton = document.getElementById("nextButton");
+const previousButton = document.getElementById("previousButton");
 
 
 async function fetchMovies(URL, containerId){
@@ -29,15 +32,43 @@ function createMovieCard(media){
     movieCard.classList.add("movieItem");
 
     movieCard.innerHTML = `
-        <div class="img" draggable="false">
-            <img src="https://image.tmdb.org/t/p/w500/${backdrop_path}.jpg" class="movieImgRounded" draggable="false">
+        <div class="img">
+            <img src="https://image.tmdb.org/t/p/w500/${backdrop_path}.jpg" class="movieImgRounded">
         </div>
         <div class="movieTitle">
-            <h4>${title || name}</h4>
+            <h4 class="smallFont">${title || name}</h4>
         </div>
         `;
         return movieCard;
 }
+
+function removeMovies(){
+    const movieItem = document.querySelectorAll(".movieItem");
+    let movieCounter = 0;
+
+    movieItem.forEach(card => {
+        if(movieCounter < 20){
+            card.remove();
+            movieCounter++;
+        } else {
+            return;
+        }
+    });
+}
+
+nextButton.addEventListener("click", () => {
+    pageNumber++;
+    removeMovies();
+    fetchMovies(trendingWeekURL+`&page=${pageNumber}`, moviesContainer);
+});
+
+previousButton.addEventListener("click", () => {
+    if(pageNumber > 1){
+        pageNumber--;
+        removeMovies();
+        fetchMovies(trendingWeekURL+`&page=${pageNumber}`, moviesContainer);
+    }
+});
 
 fetchMovies(trendingWeekURL, moviesContainer);
 fetchMovies(trendingDayURL, bestMoviesContainer);

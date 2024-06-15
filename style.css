@@ -34,16 +34,25 @@
 }
 
 .button{
+    border: none;
     background-color: black;
     padding: var(--button-padding);
-    border-radius: 1em;
+    border-radius: 0.5em;
     color: var(--font-color);
 }
 
 .divLine{
     padding: 1px 50%;
-    margin-top: 10em;
     background-color: var(--main-color);
+}
+
+.interSection{
+    background-color: var(--background-color);
+    padding-top: 5em;
+}
+
+#nextButton{
+    margin-bottom: 10em;
 }
 
 /*NavBar Section*/
@@ -136,9 +145,10 @@ li{
 
 .searchSection div{
     display: inline-block;
-    animation: fade-in linear, translateBotTop 5s;
+    transform: translateY(300%);
+    animation: fade-in linear, translateBotTop linear forwards;
     animation-timeline: view();
-    animation-range-end: 25em;
+    animation-range: 0em 35em;
 }
 
 .movieFinder{
@@ -166,6 +176,7 @@ li{
 
 .movieSection{
     background-color: var(--background-color);
+    height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,6 +243,10 @@ li{
 /* End of movies section */
 
 /* Best Movies section */
+
+section:nth-child(7){
+    height: auto;
+}
 
 .bestMoviesContainer{
     display: flex;
@@ -318,12 +333,11 @@ li{
 /* Animations */
 
 @keyframes fade-in{
-    from{transform:translate(0% 100%);filter: brightness(0%); opacity: 0};
-    to{transform:translate(0%);filter: brightness(100%); opacity: 1;};
+    from{filter: brightness(0%); opacity: 0};
+    to{filter: brightness(100%); opacity: 1;};
 }
 
 @keyframes translateBotTop{
-    from{transform: translateY(100%)};
     to{transform:translate(0%)};
 }
 
