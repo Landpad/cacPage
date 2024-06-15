@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAC Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -15,13 +18,13 @@
             <ul class="navUl">
                 </li>
                 <li>
-                    <a href="" class="item smallFont">Tendencias</a>
+                    <a href="" class="item smallFont">Trending</a>
                 </li>
                 <li>
-                    <a href="" class="item smallFont">Registrarse</a>
+                    <a href="" class="item smallFont">Sing up</a>
                 </li>
                 <li>
-                    <a href="./Pages/logInForm.html" class="item smallFont" id="indexLogIn">Iniciar Sesion</a>
+                    <a href="./Pages/logInForm.html" class="item smallFont" id="indexLogIn">Log in</a>
                 </li>
             </ul>
         </nav>
@@ -39,45 +42,50 @@
     </section>
 
     <section class="searchSection">
-        <h1>What do you want to see?</h1>
-        <form class="movieFinder">
-            <input type="text" class="searchInput" placeholder="Search..." id="search" name="search">
-            <input type="submit" class="button smallFont" value="Search"></a>
-        </form>
-
+        <div>
+            <h1 class="bigFont">What do you want to see?</h1>
+            <form class="movieFinder">
+                <input type="text" class="searchInput" placeholder="Search..." id="search" name="search">
+                <input type="submit" class="button smallFont" value="Search"></a>
+            </form>
+        </div>
         <div class="divLine"></div>
     </section>
     <section class="movieSection">
+        <h1 class="bigFont">Trending today</h1>
         <div id="movies"></div>
         <div>
-            <button class="button">Anterior</button>
-            <button class="button">Siguiente</button>
+            <button class="button smallFont">Anterior</button>
+            <button class="button smallFont">Siguiente</button>
         </div>
         <div class="divLine"></div>
     </section>
     <section class="movieSection">
-        <div class="arrowContainer" id="left">
-            <i class="arrow left" ></i>
-        </div>
-        <div id="bestMovies"></div>
-        <div class="arrowContainer" id="right">
-            <i class="arrow right"></i>
+        <h1 class="bigFont">Top rated this week</h1>
+        <div class="bestMoviesContainer">
+            <div class="arrowContainer" id="left">
+                <i class="arrow left" ></i>
+            </div>
+            <div id="bestMovies"></div>
+            <div class="arrowContainer" id="right">
+                <i class="arrow right"></i>
+            </div>
         </div>
     </section>
     <section class="footer">
         <div>
             <ul>
                 <li>
-                    <a href=""></a>
+                    <a href="" class="item smallFont">Terms and conditions</a>
                 </li>
                 <li>
-                    <a href=""></a>
+                    <a href="" class="item smallFont">Frequent questions</a>
                 </li>
                 <li>
-                    <a href=""></a>
+                    <a href="" class="item smallFont">Help</a>
                 </li>
                 <li>
-                    <a href=""></a>
+                    <a href="" class="item smallFont">Movie manager</a>
                 </li>
             </ul>
         </div>
