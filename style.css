@@ -118,7 +118,7 @@ li{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(to bottom,rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),url("/assets/banner-bg.jpg");
+    background-image: linear-gradient(to bottom,rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),url("./assets/banner-bg.jpg");
     background-size: 100%;
 }
 
