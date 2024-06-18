@@ -5,27 +5,18 @@ p{
 
 
 .container{
-    width: 100vw;
-    height: 100vh;
+    height: 100svh;
     background-color: var(--background-color);
-    background-image: linear-gradient(to bottom,rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url("./assets/banner-bg.jpg");
+    background-image: linear-gradient(to bottom,rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url("/assets/banner-bg.jpg");
     background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.formBox{
-    position: absolute;
-    opacity: 1;
-    width: 35vw;
-    height: 90vh;
-    
-}
-
 .logInSection{
     width: 35vw;
-    height: 90vh;
+    height: 80svh;
     margin-top: 5em;
     backdrop-filter: blur(10px) brightness(50%);
     border-radius: 5px;
@@ -38,6 +29,10 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.formH1{
+    margin: 2em;
 }
 
 .formInput{
@@ -94,6 +89,10 @@ form{
     background-color: var(--main-color-shade);
 }
 
+.formButton button:active{
+    transform: translateY(2px);
+}
+
 #singUpButton{
     background: none;
     border: 1px solid var(--shade-of-background);
@@ -101,5 +100,10 @@ form{
 
 #singUpButton:hover{
     transform: translateY(-1px);
-    background-color: #ff9994;
+    filter: brightness(200%);
+}
+
+#singUpButton:active{
+    transform: translateY(2px);
+    filter: brightness(50%);
 }

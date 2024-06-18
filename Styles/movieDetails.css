@@ -1,0 +1,52 @@
+p{
+    text-align: start;
+}
+
+.movieInfoContainer{
+    height: 100svh;
+    background-size: 100%;
+    color: white;
+}
+
+.movieInfoContainer div:first-child{
+    margin: 5em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#moviePic{
+    width: 20em;
+    height: 30em;
+    background-size: 300%;
+    background-position: 50%;
+    border-radius: 1em;
+    background-repeat: no-repeat;
+}
+
+.movieInfo{
+    width: 60%;
+    margin-left: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.movieInfo p{
+    margin-bottom: 3em;
+}
+
+.movieDirectors{
+    width: 80%;
+    height: 6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movieDirectors div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
